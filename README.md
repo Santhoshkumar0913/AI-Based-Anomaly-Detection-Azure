@@ -273,7 +273,6 @@ The system successfully detected:
 
 * P Santhoshkumar
 * C Narasimman
-* K Rakesh
 
 ---
 
