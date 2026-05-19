@@ -282,17 +282,6 @@ The system successfully detected:
 * Scikit-learn Documentation
 * Isolation Forest Research Papers
 * Azure Monitor Logs Documentation
-
----
-
-# ⭐ Support
-
-If you found this project useful:
-
-⭐ Star the repository
-🍴 Fork the repository
-📢 Share with others
-
 ---
 
 # 📬 Contact
