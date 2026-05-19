@@ -1,12 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dummy Website - Home</title>
-</head>
-<body>
-    <h1>Welcome to Dummy Website (Azure Cloud Security Project)</h1>
-    <p>This site generates logs for anomaly detection.</p>
+{% extends "base.html" %}
 
-    <a href="/login">Login</a>
-</body>
-</html>
+{% block title %}Home - Cloud Security Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="welcome-section">
+            <div class="container">
+                <h1 class="mb-4">🔒 Cloud Security Dashboard</h1>
+                <p class="lead mb-4">Advanced anomaly detection and security monitoring for cloud infrastructure</p>
+                <p>This platform provides real-time insights into your cloud security posture, detecting anomalies and suspicious activities across your infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">🎯 Features</h5>
+                        <ul class="list-unstyled">
+                            <li>✓ Real-time anomaly detection</li>
+                            <li>✓ Suspicious IP tracking</li>
+                            <li>✓ Traffic analysis</li>
+                            <li>✓ Security metrics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">🚀 Get Started</h5>
+                        <p>Login to access your dashboard.</p>
+                        <div class="d-grid gap-2">
+                            <a href="/login" class="btn btn-primary btn-lg">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

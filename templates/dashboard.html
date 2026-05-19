@@ -1,22 +1,66 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dashboard</title>
-</head>
-<body>
-    <h2>Welcome, {{ user }}</h2>
+{% extends "base.html" %}
 
-    <p>This is the dashboard page.</p>
-    <p>Later, anomaly detection results will be shown here.</p>
+{% block title %}Dashboard - Cloud Security{% endblock %}
 
-    <h3>Future Features:</h3>
-    <ul>
-        <li>Total Requests</li>
-        <li>Anomalies Detected</li>
-        <li>Suspicious IPs</li>
-        <li>Traffic Graph</li>
-    </ul>
+{% block content %}
+<div class="container mt-5">
 
-    <a href="/logout">Logout</a>
-</body>
-</html>
+    <div class="card shadow-lg p-5 mb-5 text-center">
+        <h1 class="mb-3">🔐 Cloud Security Dashboard</h1>
+        <p class="lead text-muted">
+            Real-time anomaly detection results from Azure ML + Azure Blob Storage
+        </p>
+    </div>
+
+    <div class="row text-center mb-4">
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-4">
+                <h6>Total Traffic Windows</h6>
+                <h2 class="text-primary">{{ total_windows }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-4">
+                <h6>Anomalies Detected</h6>
+                <h2 class="text-danger">{{ anomaly_count }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-4">
+                <h6>Normal Windows</h6>
+                <h2 class="text-success">{{ normal_count }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center mb-4">
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-4">
+                <h6>Top Suspicious IP</h6>
+                <h5 class="text-warning">{{ top_suspicious_ip }}</h5>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-4">
+                <h6>Peak Request Rate</h6>
+                <h2 class="text-info">{{ peak_requests }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm p-4">
+                <h6>Peak Login Attempts</h6>
+                <h2 class="text-secondary">{{ peak_login_attempts }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="/activity" class="btn btn-primary btn-lg">View Detailed Activity Log</a>
+    </div>
+
+</div>
+{% endblock %}

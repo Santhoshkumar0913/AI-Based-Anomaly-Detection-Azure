@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - Cloud Security Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto text-center" style="margin-top: 5rem; margin-bottom: 5rem;">
+            <h1 style="font-size: 5rem; color: #3498db; font-weight: bold;">404</h1>
+            <h2 class="mb-3">Page Not Found</h2>
+            <p class="text-muted mb-4">
+                Sorry, the page you're looking for doesn't exist. It might have been moved or deleted.
+            </p>
+
+            <div class="mb-4">
+                <svg style="width: 200px; height: 200px; opacity: 0.3;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="#3498db" stroke-width="2"/>
+                    <text x="100" y="110" font-size="60" text-anchor="middle" fill="#3498db" font-weight="bold">?</text>
+                </svg>
+            </div>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
+                <a href="/dashboard" class="btn btn-outline-primary btn-lg">Go to Dashboard</a>
+            </div>
+
+            <p class="text-muted mt-4">
+                Need help? <a href="mailto:support@cloudsecurity.com">Contact Support</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
